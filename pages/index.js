@@ -1,9 +1,9 @@
-import HelloWorld from '../components/hello-world'
+import Login from '../components/Login'
 
 export default function Home() {
   return (
     <div className="app">
-      <HelloWorld />
+     <Login />
     </div>
   )
 }
