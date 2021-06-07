@@ -1,9 +1,9 @@
-import Login from '../components/Login'
+import Readaway from '../components/Readaway'
 
 export default function Home() {
   return (
     <div className="app">
-     <Login />
+     <Readaway />
     </div>
   )
 }
