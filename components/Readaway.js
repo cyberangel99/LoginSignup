@@ -32,9 +32,9 @@ export default function Readaway() {
         </Col>
         <Col>
           <h5 className="login">Log in</h5>
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">
+          <form className="login_form">
+            <div className="mb-3">
+              <label for="exampleInputEmail1" className="form-label">
                 UserName
               </label>
               <input
@@ -43,17 +43,22 @@ export default function Readaway() {
                 aria-describedby="emailHelp"
               />
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">
+            <div class="mb-3 mb-0">
+              <label for="exampleInputPassword1" className="form-label">
                 Password
               </label>
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="exampleInputPassword1"
               />
             </div>
-            <button type="submit" class="btn btn-primary">
+            <div>
+              <a href="#" className="link-primary">
+                Forgot Password?
+              </a>
+            </div>
+            <button type="submit" className="btn btn-primary mt-3">
               Submit
             </button>
           </form>
