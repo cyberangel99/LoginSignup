@@ -11,7 +11,7 @@ export default function Readaway() {
         <Col className="mx-auto">
           <div>
             <Image
-              src="/images/Readaway-logo.png"
+              src="/images/Readaway-logo-2.png"
               alt="Readaway"
               className="logo mt-2"
             />
@@ -31,37 +31,39 @@ export default function Readaway() {
           </div>
         </Col>
         <Col>
-          <h5 className="login">Log in</h5>
-          <form className="login_form">
-            <div className="mb-3">
-              <label for="exampleInputEmail1" className="form-label">
-                UserName
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                aria-describedby="emailHelp"
-              />
-            </div>
-            <div class="mb-3 mb-0">
-              <label for="exampleInputPassword1" className="form-label">
-                Password
-              </label>
-              <input
-                type="password"
-                className="form-control"
-                id="exampleInputPassword1"
-              />
-            </div>
-            <div>
-              <a href="#" className="link-primary">
-                Forgot Password?
-              </a>
-            </div>
-            <button type="submit" className="btn btn-primary mt-3">
-              Submit
-            </button>
-          </form>
+          <div className="form-background">
+            <h5 className="login">Log in</h5>
+            <form className="login_form">
+              <div className="mb-3">
+                <label for="exampleInputEmail1" className="form-label">
+                  UserName
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3 mb-0">
+                <label for="exampleInputPassword1" className="form-label">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div>
+                <a href="#" className="link-primary">
+                  Forgot Password?
+                </a>
+              </div>
+              <button type="submit" className="btn btn-primary mt-3">
+                Submit
+              </button>
+            </form>
+          </div>
         </Col>
       </Row>
     </Container>
