@@ -1,19 +1,20 @@
 .logo {
-  height: 30px;
+  height: 22px;
 }
 .reading-image1 {
   height: 400px;
   margin-left: 35px;
 }
-.login {
-  margin-top: 15%;
-  margin-left: 15%;
-  margin-top: 23%;
-}
+
 .login_form {
   width: 70%;
-  margin-left: 15%;
-  margin-top: 30px;
+  margin-top: 18%;
+  margin-left: 14%;
+  padding: 36px;
+  padding-bottom: 10%;
+  padding-top: 8%;
+  background-color: #ada9ea;
+  border-radius: 25px;
 }
 .mb-0 {
   margin-bottom: 0 !important;
@@ -24,7 +25,7 @@
   width: 100%;
   margin-top: 50px;
   margin-left: 56px;
-  font-size: 30px;
+  font-size: 27px;
   margin-bottom: 50px;
   padding-right: 100px;
 }
@@ -32,6 +33,10 @@
   min-height: 100vh;
   background-color: #f2f2f2;
 }
-.form-background {
-  background-color: purple;
+.login {
+  padding-bottom: 13px;
+  color: white;
+}
+.form-label {
+  color: white;
 }
