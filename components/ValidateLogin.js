@@ -18,11 +18,12 @@ const ValidateLogin = () => {
       }}
     >
       {({ handleSubmit, handleChange, values, touched, errors }) => (
-        <Form noValidate onSubmit={handleSubmit}>
+        <Form className="login_form" noValidate onSubmit={handleSubmit}>
           <Container>
             <Row>
               <Col md={12}>
-                <Form.Group controlId="email">
+                <h2 className="login">Login</h2>
+                <Form.Group className="email" controlId="email">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
@@ -35,11 +36,8 @@ const ValidateLogin = () => {
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
               </Col>
-            </Row>
-
-            <Row>
               <Col md={12}>
-                <Form.Group controlId="password">
+                <Form.Group className="password" controlId="password">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
@@ -50,6 +48,9 @@ const ValidateLogin = () => {
                     placeholder="Password"
                   />
                 </Form.Group>
+                <Button variant="primary" className="button">
+                  Submit
+                </Button>{' '}
               </Col>
             </Row>
           </Container>
@@ -58,7 +59,7 @@ const ValidateLogin = () => {
     </Formik>
   );
 
-  /*<Form onSubmit={handleSubmit} className="login_form">
+  /*<Form onSubmit={handleSubmit} className="_form_form">
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control
