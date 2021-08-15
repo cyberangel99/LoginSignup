@@ -8,10 +8,14 @@ const ValidateLogin = () => {
     email: yup.string().email().required(),
     password: yup.string().min(6).max(12).required()
   });
+  const formSubmit = (values, { resetForm }) => {
+    console.log(values);
+  };
 
   return (
     <Formik
-      validateSchema={schema}
+      validationSchema={schema}
+      onSubmit={formSubmit}
       initialValues={{
         email: '',
         password: ''
@@ -28,12 +32,15 @@ const ValidateLogin = () => {
                   <Form.Control
                     type="email"
                     name="email"
-                    value={values.email}
-                    onChange={handleChange}
-                    isValid={touched.email && !errors.email}
                     placeholder="Email"
+                    value={values.email}
+                    isValid={touched.email && !errors.email}
+                    isInvalid={touched.email && errors.email}
+                    onChange={handleChange}
                   />
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email}
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
               <Col md={12}>
@@ -42,13 +49,17 @@ const ValidateLogin = () => {
                   <Form.Control
                     type="password"
                     name="password"
-                    value={values.password}
-                    onChange={handleChange}
-                    isValid={touched.password && !errors.password}
                     placeholder="Password"
+                    value={values.password}
+                    isValid={touched.password && !errors.password}
+                    isInvalid={touched.password && errors.password}
+                    onChange={handleChange}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.password}
+                  </Form.Control.Feedback>
                 </Form.Group>
-                <Button variant="primary" className="button">
+                <Button variant="primary" type="submit" className="button">
                   Submit
                 </Button>{' '}
               </Col>
