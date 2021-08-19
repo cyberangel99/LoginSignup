@@ -7,37 +7,37 @@ import ValidateLogin from '../components/ValidateLogin';
 
 export default function Readaway() {
   return (
-    <section className="loginPage">
-      <Container fluid>
-        <Row>
-          <Col className="mx-auto">
-            <div>
-              <Image
-                src="/images/Readaway-logo-2.png"
-                alt="Readaway"
-                className="logo mt-2"
-              />
-            </div>
-            <div>
-              <p className="intro">
-                Want to read about an adventure on the high seas? Maybe a novel
-                of the renaissance era? Log in today to access your reading
-                novel!
-              </p>
-            </div>
-            <div>
-              <Image
-                src="/images/Readaway-image1.png"
-                alt="Reading"
-                className="reading-image1"
-              />
-            </div>
-          </Col>
-          <Col>
-            <ValidateLogin />
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    //<section className="loginPage">
+    <Container className="loginPage" fluid>
+      <Row>
+        <Col md={6} className="mx-auto login_col">
+          <div>
+            <Image
+              src="/images/Readaway-logo-2.png"
+              alt="Readaway"
+              className="logo mt-2"
+            />
+          </div>
+          <div>
+            <p className="intro">
+              Want to read about an adventure on the high seas? Maybe a novel of
+              the renaissance era? Log in today to access your reading novel!
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/images/Readaway-image1.png"
+              alt="Reading"
+              className="reading-image"
+              fluid
+            />
+          </div>
+        </Col>
+        <Col md={6}>
+          <ValidateLogin />
+        </Col>
+      </Row>
+    </Container>
+    // </section>
   );
 }
