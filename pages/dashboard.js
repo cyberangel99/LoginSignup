@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import firebase from '../utils/firebase';
 import { useRouter } from 'next/router';
-//check to see of token is removed when signing out
+
 export default function Dashboard() {
   //Signout
   const router = useRouter();
@@ -12,6 +12,7 @@ export default function Dashboard() {
       .signOut()
       .then(() => {
         router.push('/');
+        localStorage.removeItem('token');
       });
   };
   return (
