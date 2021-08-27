@@ -7,7 +7,6 @@ import ValidateLogin from '../components/ValidateLogin';
 
 export default function Readaway() {
   return (
-    //<section className="loginPage">
     <Container className="loginPage" fluid>
       <Row>
         <Col md={6} className="mx-auto login_col">
