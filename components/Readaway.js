@@ -9,7 +9,7 @@ export default function Readaway() {
   return (
     <Container className="loginPage" fluid>
       <Row>
-        <Col md={6} className="mx-auto login_col">
+        <Col md={6} className="mx-auto">
           <div>
             <Image
               src="/images/Readaway-logo-2.png"

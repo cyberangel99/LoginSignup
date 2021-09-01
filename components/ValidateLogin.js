@@ -96,6 +96,9 @@ const ValidateLogin = () => {
                   <Button variant="primary" type="submit" className="button">
                     Submit
                   </Button>{' '}
+                  <a href="/Signup" class="link-primary">
+                    Don't have an account? Sign up here!
+                  </a>
                 </Col>
               </Row>
             </Container>
