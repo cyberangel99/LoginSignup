@@ -28,8 +28,19 @@ const ValidateSignup = () => {
                 <h2 className="login">Login</h2>
                 <Form.Group className="email" controlId="email">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" name="email" placeholder="Email" />
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    value={values.email}
+                    isValid={touched.email && !errors.email}
+                    isInvalid={touched.email && errors.email}
+                  />
                 </Form.Group>
+                <Form.Control.Feedback type="invalid">
+                  {errors.email}
+                </Form.Control.Feedback>
               </Col>
               <Col md={12}>
                 <Form.Group className="password" controlId="password">
@@ -38,16 +49,32 @@ const ValidateSignup = () => {
                     type="password"
                     name="password"
                     placeholder="Password"
+                    onChange={handleChange}
+                    value={values.password}
+                    isValid={touched.password && !errors.password}
+                    isInvalid={touched.password && errors.password}
                   />
                 </Form.Group>
+                <Form.Control.Feedback type="invalid">
+                  {errors.password}
+                </Form.Control.Feedback>
                 <Form.Group className="password" controlId="password">
                   <Form.Label>Confirm Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="Confirm Password"
+                    onChange={handleChange}
+                    value={values.confirmPassword}
+                    isValid={touched.confirmPassword && !errors.confirmPassword}
+                    isInvalid={
+                      touched.confirmPassword && errors.confirmPassword
+                    }
                   />
                 </Form.Group>
+                <Form.Control.Feedback type="invalid">
+                  {errors.confirmPassword}
+                </Form.Control.Feedback>
                 <Button variant="primary" type="submit" className="button">
                   Submit
                 </Button>
