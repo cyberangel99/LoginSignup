@@ -6,9 +6,10 @@ const ValidateSignup = () => {
   const schema = yup.object().shape({
     email: yup.string().email().required(),
     password: yup.string().min(6).max(12).required(),
-    passwordConfirmation: yup
+    confirmPassword: yup
       .string()
       .oneOf([yup.ref('password'), null], 'Passwords must match')
+      .required()
   });
 
   return (
@@ -25,7 +26,7 @@ const ValidateSignup = () => {
           <Container>
             <Row>
               <Col md={12}>
-                <h2 className="login">Login</h2>
+                <h2 className="login">Signup</h2>
                 <Form.Group className="email" controlId="email">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
@@ -37,10 +38,10 @@ const ValidateSignup = () => {
                     isValid={touched.email && !errors.email}
                     isInvalid={touched.email && errors.email}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email}
+                  </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Control.Feedback type="invalid">
-                  {errors.email}
-                </Form.Control.Feedback>
               </Col>
               <Col md={12}>
                 <Form.Group className="password" controlId="password">
@@ -54,15 +55,16 @@ const ValidateSignup = () => {
                     isValid={touched.password && !errors.password}
                     isInvalid={touched.password && errors.password}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.password}
+                  </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Control.Feedback type="invalid">
-                  {errors.password}
-                </Form.Control.Feedback>
-                <Form.Group className="password" controlId="password">
+
+                <Form.Group className="password" controlId="confirmPassword">
                   <Form.Label>Confirm Password</Form.Label>
                   <Form.Control
                     type="password"
-                    name="password"
+                    name="confirmPassword"
                     placeholder="Confirm Password"
                     onChange={handleChange}
                     value={values.confirmPassword}
@@ -71,10 +73,11 @@ const ValidateSignup = () => {
                       touched.confirmPassword && errors.confirmPassword
                     }
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.confirmPassword}
+                  </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Control.Feedback type="invalid">
-                  {errors.confirmPassword}
-                </Form.Control.Feedback>
+
                 <Button variant="primary" type="submit" className="button">
                   Submit
                 </Button>
