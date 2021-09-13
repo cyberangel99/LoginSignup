@@ -18,7 +18,7 @@ export default function Signup() {
             />
           </div>
           <div>
-            <p className="intro">Create your Readaway account today!</p>
+            <p className="intro2">Create your Readaway account today!</p>
           </div>
           <div>
             <Image
