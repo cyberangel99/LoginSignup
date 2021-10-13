@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next export",
+    "deploy": "next build && next export -o docs/"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.6.1",
